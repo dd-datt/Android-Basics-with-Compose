@@ -6,7 +6,6 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -30,11 +29,12 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ComposeQuadrantTheme {
-
+                ComposeQuadrant()
             }
         }
     }
 }
+
 
 @Composable
 fun ComposeQuadrant() {
@@ -127,69 +127,6 @@ fun ComposeQuadrant() {
     }
 
 
-}
-
-
-@Composable
-fun FourQuadrantScreen() {
-    Column(modifier = Modifier.fillMaxSize()) {
-        Row(modifier = Modifier.weight(1f)) {
-            Box(
-                modifier = Modifier
-                    .weight(1f)
-                    .fillMaxHeight()
-                    .background(Color.Red),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = "Quadrant 1",
-                    color = Color.White,
-                    textAlign = TextAlign.Center
-                )
-            }
-            Box(
-                modifier = Modifier
-                    .weight(1f)
-                    .fillMaxHeight()
-                    .background(Color.Green),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = "Quadrant 2",
-                    color = Color.White,
-                    textAlign = TextAlign.Center
-                )
-            }
-        }
-        Row(modifier = Modifier.weight(1f)) {
-            Box(
-                modifier = Modifier
-                    .weight(1f)
-                    .fillMaxHeight()
-                    .background(Color.Blue),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = "Quadrant 3",
-                    color = Color.White,
-                    textAlign = TextAlign.Center
-                )
-            }
-            Box(
-                modifier = Modifier
-                    .weight(1f)
-                    .fillMaxHeight()
-                    .background(Color.Yellow),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = "Quadrant 4",
-                    color = Color.Black,
-                    textAlign = TextAlign.Center
-                )
-            }
-        }
-    }
 }
 
 
