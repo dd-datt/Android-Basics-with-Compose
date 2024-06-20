@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -26,6 +25,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ComposeQuadrantTheme {
+                App()
             }
         }
     }
@@ -33,7 +33,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun App() {
-    Column (modifier = Modifier.fillMaxWidth()){
+    Column (){
         Row(
             modifier = Modifier.weight(1f)
         ) {
@@ -76,7 +76,8 @@ fun CardInformation(
     modifier: Modifier= Modifier
 ) {
     Column(
-        modifier = modifier            .fillMaxSize()
+        modifier = modifier
+            .fillMaxSize()
             .background(backgr)
             .padding(16.dp),
         verticalArrangement = Arrangement.Center,
